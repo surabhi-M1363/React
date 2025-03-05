@@ -6,12 +6,14 @@ import './LoginForm.css';
 import App from './App';
 import TodoApp from './todoapp';
 import reportWebVitals from './reportWebVitals';
+import Calculator from './calculator';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( <
     React.StrictMode >
-    <LoginForm / >
+    <LoginForm/>
     <TodoApp/>
+    <Calculator/>
     </React.StrictMode>
 );
 
