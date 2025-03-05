@@ -1,0 +1,104 @@
+/* styles.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .app-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  .login-form,
+  .dashboard-container {
+    width: 100%;
+  }
+  
+  .login-form h2,
+  .dashboard-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .login-form input,
+  .item-input input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  .login-button,
+  .logout-button,
+  .add-button,
+  .remove-button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .login-button,
+  .add-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .login-button:hover,
+  .add-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .logout-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .logout-button:hover {
+    background-color: #c82333;
+  }
+  
+  .remove-button {
+    background-color: #6c757d;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .remove-button:hover {
+    background-color: #5a6268;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  .item-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+  }

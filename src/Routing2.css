@@ -1,0 +1,40 @@
+.app {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.nav {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.nav-link {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  background-color: #ddd;
+}
+
+.page {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.page p {
+  color: #666;
+}
