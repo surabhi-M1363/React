@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import LoginForm from './LoginForm';
-import './LoginForm.css';
-import App from './App';
-import TodoApp from './todoapp';
 import reportWebVitals from './reportWebVitals';
-
+import App from './Ecommerce';
+import './Ecommerce.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render( <
     React.StrictMode >
-    <LoginForm / >
-    <TodoApp/>
+    <App/>
     </React.StrictMode>
 );
 
