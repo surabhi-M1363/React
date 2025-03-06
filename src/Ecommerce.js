@@ -12,6 +12,7 @@ function App() {
     { id: 3, name: 'Product 3', price: 30 }
   ]);
   const [cart, setCart] = useState([]);
+  const [currentPage, setCurrentPage] = useState('catalog');
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -29,6 +30,7 @@ function App() {
     setPassword('');
     setError('');
     setCart([]);
+    setCurrentPage('catalog');
   };
 
   const addToCart = (product) => {
@@ -45,19 +47,24 @@ function App() {
   return (
     <div className="app-container">
       {isLoggedIn ? (
-        <div className="catalog-container">
-          <h2>Welcome, {username || 'User'}!</h2>
-          <p>You are now logged in.</p>
-          <div className="product-list">
-            {products.map((product) => (
-              <div key={product.id} className="product-item">
-                <h3>{product.name}</h3>
-                <p>Price: {product.price}</p>
-                <button onClick={() => addToCart(product)}>Add to Cart</button>
-              </div>
-            ))}
+        currentPage === 'catalog' ? (
+          <div className="catalog-container">
+            <h2>WELCOME to The Cart, {username || 'User'}!</h2>
+            <p>You are now logged in.</p>
+            <div className="product-list">
+              {products.map((product) => (
+                <div key={product.id} className="product-item">
+                  <h3>{product.name}</h3>
+                  <p>Price: {product.price}</p>
+                  <button onClick={() => addToCart(product)}>Add to Cart</button>
+                </div>
+              ))}
+            </div>
+            <button onClick={() => setCurrentPage('cart')}>View Cart</button>
+            <button className="logout-button" onClick={handleLogout}>Logout</button>
           </div>
-          <div className="cart">
+        ) : currentPage === 'cart' ? (
+          <div className="cart-container">
             <h3>Shopping Cart</h3>
             {cart.length > 0 ? (
               <ul>
@@ -72,9 +79,19 @@ function App() {
               <p>Your cart is empty.</p>
             )}
             <p>Total: {total}</p>
+            <button onClick={() => setCurrentPage('payment')}>Proceed to Payment</button>
+            <button onClick={() => setCurrentPage('catalog')}>Back to Catalog</button>
+            <button className="logout-button" onClick={handleLogout}>Logout</button>
           </div>
-          <button className="logout-button" onClick={handleLogout}>Logout</button>
-        </div>
+        ) : (
+          <div className="payment-container">
+            <h3>Payment Page</h3>
+            <p>Total Amount: {total}</p>
+            <button onClick={() => alert('Payment Successful!')}>Pay Now</button>
+            <button onClick={() => setCurrentPage('cart')}>Back to Cart</button>
+            <button className="logout-button" onClick={handleLogout}>Logout</button>
+          </div>
+        )
       ) : (
         <form className="login-form" onSubmit={handleLogin}>
           <h2>Login</h2>
