@@ -1,0 +1,26 @@
+.drag-drop-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.allrounders-list {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.player {
+    background-color: white;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: grab;
+}
+
+.player.dragging {
+    background-color: lightblue;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
