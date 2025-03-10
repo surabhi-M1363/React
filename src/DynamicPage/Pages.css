@@ -1,0 +1,48 @@
+.page {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.page h1 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.page p {
+    font-size: 18px;
+    color: #666;
+}
+
+.home {
+    background-color: #fffae6;
+}
+
+.about {
+    background-color: #e6f7ff;
+}
+
+.contact {
+    background-color: #f2e6ff;
+}
+
+.post {
+    background-color: #e6ffe6;
+}
+
+.not-found {
+    background-color: #ffcccc;
+}
+
+
+/* Loading */
+
+.loading {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 50px;
+}
