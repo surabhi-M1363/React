@@ -1,0 +1,71 @@
+Data Flow Diagram (DFD) for ThemeContext Project 
+ 
+Level 0 (Context Diagram) 
+At the highest level, we have just one process representing the system as a whole. 
+ 
++--------------------------------+ 
+|    External Entities          |                  | 
+|      - User                        | 
++--------------------------------+ 
+          |           v 
++---------------------------------+ 
+|  ThemeContext System  | 
+|  (Process 1.0)                 | 
++---------------------------------+ 
+ 
+ 
+ 
+Explanation: 
+• External Entity (User): Users interact with the system to toggle the theme and navigate pages. 
+• Process (ThemeContext System): The system manages the theme and applies it dynamically across different pages. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Level 1 DFD (Decomposition of Process) 
+ 
+Now, let's break down the ThemeContext System (Process 1.0) into more detailed steps. 
+ 
++-----------------------+ 
+|    External Entity    | 
+|        (User)        | 
++-----------------------+ 
+          |           v 
++------------------------+ 
+|  Process: 1.1 - Toggle Theme | 
+|   (ThemeContext.js)         | 
++------------------------+ 
+          | 
+          v 
++------------------------+ 
+|  Process: 1.2 - Apply Theme  | 
+|   (ThemeProvider)           | 
++------------------------+ 
+          | 
+          v 
++------------------------+ 
+|  Process: 1.3 - Render Pages | 
+|   (About.js, Contact.js)     | 
++------------------------+ 
+ 
+ 
+Explanation: 
+1. Process 1.1 (Toggle Theme - ThemeContext.js): Users toggle between light and dark themes. 
+2. Process 1.2 (Apply Theme - ThemeProvider): The theme is updated dynamically and applied to the entire application. 
+3. Process 1.3 (Render Pages - About.js, Contact.js): The pages display content with the currently selected theme. 
+ 
+Data Flow 
+1. The user toggles the theme using ThemeContext.js. 
+2. The ThemeProvider updates the UI based on the selected theme. 3. The About.js and Contact.js pages render with the applied theme. 
+Additional Notes: 
+• The system ensures that the theme persists across different pages. 
+• The useContext Hook is used for managing the theme state efficiently. 
+• Further enhancements can include saving user preferences in local storage for a persistent theme setting. 
+ 
+ This DFD provides a structured visualization of data flow in the ThemeContext Project. 
+. 
+ 
