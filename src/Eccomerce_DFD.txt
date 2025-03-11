@@ -1,0 +1,87 @@
+Data Flow Diagram (DFD) for Ecommerce Project 
+Level 0 (Context Diagram) 
+At the highest level, we have just one process, which represents the system as a whole. 
+ 
+ 
++---------------------------------+ 
+|    External Entities           |                    | 
+|     - User                          | 
+|     - Admin                        | 
++----------------------------------+ 
+          |           v 
++----------------------------------+ 
+|    Ecommerce System   | 
+|    (Process 1.0)                 | 
++----------------------------------+ 
+ 
+ 
+Explanation: 
+• External Entity (User/Admin): Users interact with the system by logging in, browsing, adding items to the cart, and making payments. Admins manage products and users. 
+• Process (Ecommerce System): The system processes user actions, displays pages dynamically, and handles transactions. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Level 1 DFD (Decomposition of Process) 
+Now, let's break down the Ecommerce System (Process 1.0) into more detailed steps. 
+ 
++-----------------------+             +---------------------------------+ 
+|    External Entity    |             |      External Entity           | 
+|        (User)        |        |         |         (Admin)                   | 
++-----------------------+              +---------------------------------+ 
+          |                                                 | 
+          v                                                v 
++-----------------------------+       +---------------------------------+ 
+|  Process: 1.1 - User   |         |  Process: 1.2 - Admin     | 
+|   Login (UserLogin.js) |         |   Login (AdminLogin.js)   | 
++-----------------------------+        +--------------------------------+ 
+          |                                                  |           v                                                 v 
++------------------------------+       +----------------------------------+ 
+|  Process: 1.3 - User     |        |  Process: 1.4 - Admin      | 
+|   Panel (UserPanel.js)  |        |   Panel (AdminPanel.js)   | 
++------------------------------+       +----------------------------------+ 
+          |           v 
++--------------------------------------------+ 
+| Process: 1.5 - Browse                  | 
+|  Products (EcommercePage.js)    | 
++---------------------------------------------+ 
+          |           v 
++------------------------------------+ 
+| Process: 1.6 - Add to Cart   | 
+|   (Cart.js)                              | 
++------------------------------------+ 
+          |           v 
++--------------------------------------+ 
+| Process: 1.7 – Payment        | |   (Payment.js)                        | 
++--------------------------------------+ 
+ 
+ 
+ 
+ 
+Explanation: 
+1. Process 1.1 (User Login - UserLogin.js):  Users authenticate and log in. 
+2. Process 1.2 (Admin Login - AdminLogin.js): Admins authenticate and log in. 
+ 
+3. Process 1.3 (User Panel - UserPanel.js): Users manage their profiles and actions. 
+ 
+4. Process 1.4 (Admin Panel - AdminPanel.js): Admins manage products and users. 
+5. Process 1.5 (Browse Products - EcommercePage.js): Users explore and select products. 
+6. Process 1.6 (Add to Cart - Cart.js): Users add selected products to their cart. 
+7. Process 1.7 (Payment - Payment.js): Users proceed with payments for their orders. 
+Data Flow 
+1. Users and admins log in through UserLogin.js and AdminLogin.js. 
+2. Users navigate the EcommercePage.js to browse products. 
+3. Users add items to their cart via Cart.js. 
+4. Users make payments through Payment.js. 
+5. Admins manage the system using AdminPanel.js. 
+6. The UI updates dynamically based on user and admin interactions. 
+Additional Notes: 
+• Further enhancements can include real-time updates for cart and payment processing. 
+• Security measures such as authentication and authorization can be implemented. 
+• The system can be expanded to include order tracking, notifications, and reviews. 
+
+This DFD provides a structured visualization of data flow in the Ecommerce Project. 
+ 

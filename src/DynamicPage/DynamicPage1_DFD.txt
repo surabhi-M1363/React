@@ -1,0 +1,80 @@
+Data Flow Diagram (DFD) for DynamicPage Project 
+ 
+Level 0 (Context Diagram) 
+At the highest level, we have just one process representing the system as a whole. 
+ 
++-----------------------+ 
+|  External Entities    |                   | 
+|   - User             | 
++-----------------------+ 
+          | 
+          v 
++------------------------+ 
+|  DynamicPage System   | 
+|  (Process 1.0)        | 
++------------------------+ 
+ 
+ 
+ 
+Explanation: 
+• External Entity (User): Users interact with the system by navigating different pages. 
+• Process (DynamicPage System): The system processes requests and renders dynamic content. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Level 1 DFD (Decomposition of Process) 
+ 
+Now, let's break down the DynamicPage System (Process 1.0) into more detailed steps. 
+ 
++-----------------------+ 
+|    External Entity    | 
+|        (User)        | 
++-----------------------+           
+          |           v 
++------------------------+ 
+|  Process: 1.1 - Render Navigation | 
+|   (Navbar.js)                    | 
++------------------------+         
+          |           v 
++--------------------------------------------------------------+ 
+|  Process: 1.2 - Route to Pages                          | 
+|   (DynamicPageApp.js)                                     | 
++--------------------------------------------------------------+ 
+      |                  |                 |                 | 
+      v                 v                v                v 
++-----------+ +-----------+ +----------+ +-----------+ 
+| About.js  | | Contact.js | | Home.js  | | Post.js   | +-----------+ +-----------+ +----------+ +-----------+          |           v 
++-----------------------------------------+ 
+|  Process: 1.3 - Handle Errors   | 
+|   (NotFound.js)                          | 
++-----------------------------------------+ 
+ 
+ 
+ 
+ 
+ 
+Explanation: 
+1. Process 1.1 (Render Navigation - Navbar.js): Displays a navigation bar for users to select different pages. 
+2. Process 1.2 (Route to Pages - DynamicPageApp.js): Manages the routing and dynamically renders the requested pages. 
+3. Pages (About.js, Contact.js, Home.js, Post.js): These components display respective content based on user selection. 
+4. Process 1.3 (Handle Errors - NotFound.js): Renders a 404 page if the requested page does not exist. 
+ 
+Data Flow 
+• The user interacts with the Navbar.js to navigate. 
+• The DynamicPageApp.js processes navigation and renders the appropriate page. 
+• If the page exists, the content is displayed using About.js, Contact.js, Home.js, or Post.js. 
+• If the page does not exist, the NotFound.js page is displayed. 
+ 
+Additional Notes: 
+• The system ensures smooth navigation across different pages. 
+• React Router is likely used for handling page routing. 
+• Future enhancements could include adding more pages or integrating backend data. 
+ 
+This DFD provides a structured visualization of data flow in the DynamicPage Project. 
+. 
+ 
