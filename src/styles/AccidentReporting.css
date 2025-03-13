@@ -1,0 +1,42 @@
+.accident-report-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.accident-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accident-form label {
+    font-weight: bold;
+}
+
+.accident-form input,
+.accident-form textarea,
+.accident-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.accident-button {
+    background: #ff4d4d;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.accident-button:hover {
+    background: #cc0000;
+}

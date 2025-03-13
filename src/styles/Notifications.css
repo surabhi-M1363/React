@@ -1,0 +1,26 @@
+.notification-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.notification-item {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notification-item.new {
+    background: #e3f2fd;
+    font-weight: bold;
+}
+
+.notification-time {
+    font-size: 14px;
+    color: gray;
+}

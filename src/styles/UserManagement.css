@@ -1,0 +1,41 @@
+.user-management-container {
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.user-table th,
+.user-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.user-table th {
+    background: #343a40;
+    color: white;
+}
+
+.user-action {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+.action-delete {
+    background: #dc3545;
+}
+
+.action-edit {
+    background: #ffc107;
+}
