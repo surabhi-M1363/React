@@ -1,11 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom/client"; // ✅ Use react-dom/client for React 18
-import App from "./DynamicPage/DynamicPageApp";
-import './index.css';
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById("root")); // ✅ Use createRoot
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
 );
